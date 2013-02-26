@@ -1,5 +1,33 @@
+<!-- template for listing all projects -->
 <!DOCTYPE html>
 
+<html>
+<body>
 
 <h1>All Projects</h1>
-<p>This is an example of new code.</p>
+
+<!-- gets the list of all project names. Links go to project name URI
+which lists all the projects with that name -->
+<ul class="all projects">
+	<li class="projects">
+		<a href="projectInstances.html" rel="project" class="projectName">{{ projectName }}</a>
+		<span class="description">{{ description }}</span>
+	</li>
+	<li class="projects">
+		<a href="projectInstances.html" rel="project" class="projectName">{{ projectName }}</a>
+		<span class="description">{{ description }}</span>
+	</li>
+</ul>
+
+<p class="new project">Add a new project by entering in the information below.</p>
+<form method="post" name="create-project" action="/all">
+	<label>Project Name</label>
+	<input name="projectName"  value=""></br>
+	<label>Description</label>
+	<input name="description" value=""></br>
+	<input type="submit"/>
+</form>
+
+</body>
+</html>
+	
