@@ -1,16 +1,16 @@
 <!-- template for search queries -->
 
 <html>
-<body>
-<h1>Search for a Project</h1>
+	<body>
+		<h1>Search for a Project</h1>
 
-<!-- include search form that will send a get request to the server to
-filter the data then display the results -->
-<h2>Descriptive content to inform user how to search</h2>
-<form method="get" name="search" action="/search">
-	<label>Enter a project: </label></br>
-	<input type="text" name="namesearch" value=""/>
-	<input type="submit"/>
-</form>
-</body>
+		<!-- include search form that will send a get request to the server to
+		filter the data then display the results -->
+		<h2>Descriptive content to inform user how to search</h2>
+		<form method="get" class="projectSearch" action="/search">
+			<label>Enter a project: </label></br>
+			<input type="text" name="nameSearch" value=""/>
+			<input type="submit"/>
+		</form>
+	</body>
 </html>

@@ -1,33 +1,41 @@
 <!--template for individual project record -->
 
 <html>
-<body>
-<h1>{{ projectName }} - {{ project-id }}</h1>
+	<body>
+		<div id="projectHeader">
+			<h1>{{ projectName }} - {{ projectID }}</h1>
+			<span class="description">{{ description }}</span>
+		</div>
+		
+		<!-- lists all materials needed for the project and links to list of
+		related projects using the same material -->
+		<div id="materials">
+			<h2>Materials</h2> 
+				<ul class="material">
+					<li>
+						<a href="/search?material={material name}" rel="material">{{ materialName }}</a>
+					</li></br>
+					<li>
+						<a href="/search?material={material name}" rel="material">{{ materialName }}</a>
+					</li></br>
+				</ul>
+		</div>
+	
+		<h2>How to do it:</h2>
+		<p class="instructions">{{ instructions }}</p>
 
-<p class="description">{{ description }}</p>
-
-<!-- lists all materials needed for the project and links to list of
-related projects using the same material -->
-<h2>Materials</h2> 
-	<ul class="materials">
-		<li class="material">
-			<a href="#" rel="material">{{ materialName }}</a>
-		</li></br>
-		<li class="material">
-			<a href="#" rel="material">{{ materialName }}</a>
-		</li></br>
-	</ul>
-
-<h2>How to do it:</h2>
-<p class="instructions">{{ instructions }}</p>
-
-<h2>Update this project:</h2>
-<form method="patch" name="update-project" action="/{name of project}/{project-id}">
-	<label>Project Name</label>
-	<input type="text" name="projectName"  value=""></br>
-	<label>Description</label>
-	<input type="text" name="description" value=""></br>
-	<label>Materials</label>
-	<input type="text" name="material" value=""></br>
-	<input type="submit"/>
-</form>
+		<h2>Update this project:</h2>
+		<form method="patch" action="/{name of project}/{project-id}" class="projectUpdate">
+			<label>Project Name</label>
+			<input type="text" name="projectName"  value=""></br>
+			
+			<label>Description</label>
+			<textarea name="projectDescription" value=""></br>
+			
+			<label>Materials</label>
+			<input type="text" name="projectMaterial" value=""></br>
+			
+			<input type="submit"/>
+		</form>
+	</body>
+</html>
