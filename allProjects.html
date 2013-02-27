@@ -2,32 +2,35 @@
 <!DOCTYPE html>
 
 <html>
-<body>
+	<body>
+		<h1>All Projects</h1>
 
-<h1>All Projects</h1>
-
-<!-- gets the list of all project names. Links go to project name URI
-which lists all the projects with that name -->
-<ul class="all projects">
-	<li class="projects">
-		<a href="projectInstances.html" rel="project" class="projectName">{{ projectName }}</a>
-		<span class="description">{{ description }}</span>
-	</li>
-	<li class="projects">
-		<a href="projectInstances.html" rel="project" class="projectName">{{ projectName }}</a>
-		<span class="description">{{ description }}</span>
-	</li>
-</ul>
-
-<p>Add a new project by entering in the information below.</p>
-<form method="post" name="create-project" action="/all">
-	<label>Project Name</label>
-	<input name="projectName"  value=""></br>
-	<label>Description</label>
-	<input name="description" value=""></br>
-	<input type="submit"/>
-</form>
-
-</body>
+		<!-- gets the list of all project names. Links go to project name URI
+		which lists all the projects with that name -->
+		<div id="projectList">
+			<ul class="projects">
+				<li>
+					<a href="projectInstances.html" rel="project">{{ projectName }}</a>
+					<span class="description">{{ description }}</span>
+				</li>
+				<li>
+					<a href="projectInstances.html" rel="project">{{ projectName }}</a>
+					<span class="description">{{ description }}</span>
+				</li>
+			</ul>
+		</div>
+		
+		<p>Add a new project to the list by entering in the information below.</p>
+		
+		<form method="post" action="/all" class="projectCreate">
+			<label>Project Name</label>
+			<input type="text" name="projectName"  value=""></br>
+			
+			<label>Description</label>
+			<textarea name="projectDescription" value=""></br>
+			
+			<input type="submit"/>
+		</form>
+	</body>
 </html>
 	
