@@ -1,29 +1,26 @@
 <!-- template for list of projects that have the same name -->
 
 <html>
-<body>
-<h1>{{ projectName }}</h1>
+	<body>
+		<h1>{{ projectName }}</h1>
 
-<!-- gets the list of all projects with the same name. Links go to 
-project record -->
-<ul class="projectNames">
-	<li class="projectnames">
-		<a href="/{name of project}/{project-id}" rel="project" 
-		class="project-id">{{ project-id }}</a>
-		<span class="alternate title">{{ altTitle }}</span></br>
-		<span class="description">{{ description }}</span>
-	</li></br>
-	<li class="projectnames">
-		<a href="/{name of project}/{project-id}" rel="project" 
-		class="project-id">{{ project-id }}</a>
-		<span class="alternate title">{{ altTitle }}</span></br>
-		<span class="description">{{ description }}</span>
-	</li>
-</ul>
-
-
-
-
-
-</body>
+		<!-- gets the list of all projects with the same name. Links go to 
+		project record -->
+		<div id="instanceList">
+			<ul class="projectNames">
+				<li>
+					<a href="/{name of project}/{project-id}" rel="project" 
+					class="projectID">{{ projectID }}</a>
+					<span class="alternateTitle">{{ altTitle }}</span></br>
+					<span class="description">{{ description }}</span>
+				</li></br>
+				<li>
+					<a href="/{name of project}/{project-id}" rel="project" 
+					class="projectID">{{ projectID }}</a>
+					<span class="alternateTitle">{{ altTitle }}</span></br>
+					<span class="description">{{ description }}</span>
+				</li>
+			</ul>
+		</div>
+	</body>
 </html>
