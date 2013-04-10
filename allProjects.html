@@ -1,7 +1,8 @@
-<!-- template for listing all projects -->
 <!DOCTYPE html>
-
+<meta charset="utf-8"> 
+<!-- template for listing all projects -->
 <html>
+  <title> All Projects</title>
 	<body>
 		<h1>All Projects</h1>
 
@@ -10,11 +11,11 @@
 		<div id="projectList">
 			<ul class="projects">
 				<li>
-					<a href="projectInstances.html" rel="project">{{ projectName }}</a>
+					<a href="projectInstances.html" rel="http://sils-webinfo.github.io/DIYProjects/project">{{ projectName }}</a>
 					<span class="description">{{ description }}</span>
 				</li>
 				<li>
-					<a href="projectInstances.html" rel="project">{{ projectName }}</a>
+					<a href="projectInstances.html" rel="http://sils-webinfo.github.io/DIYProjects/project">{{ projectName }}</a>
 					<span class="description">{{ description }}</span>
 				</li>
 			</ul>
@@ -24,10 +25,10 @@
 		
 		<form method="post" action="/all" class="projectCreate">
 			<label>Project Name</label>
-			<input type="text" name="projectName"  value=""></br>
+			<input type="text" name="projectName"  value=""><br>
 			
 			<label>Description</label>
-			<textarea name="projectDescription" value=""></br>
+			<textarea name="projectDescription"></textarea><br>
 			
 			<input type="submit"/>
 		</form>

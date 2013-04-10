@@ -1,6 +1,8 @@
+<!DOCTYPE html>
+<meta charset="utf-8"> 
 <!--template for individual project record -->
-
 <html>
+  <title>{{ projectName }} - {{ projectID }}</title>
 	<body>
 		<div id="projectHeader">
 			<h1>{{ projectName }} - {{ projectID }}</h1>
@@ -13,11 +15,11 @@
 			<h2>Materials</h2> 
 				<ul class="material">
 					<li>
-						<a href="/search?material={material name}" rel="material">{{ materialName }}</a>
-					</li></br>
+						<a href="/search?material={materialname}" rel="http://sils-webinfo.github.io/DIYProjects/material">{{ materialName }}</a>
+					</li><br>
 					<li>
-						<a href="/search?material={material name}" rel="material">{{ materialName }}</a>
-					</li></br>
+						<a href="/search?material={materialname}" rel="http://sils-webinfo.github.io/DIYProjects/material">{{ materialName }}</a>
+					</li><br>
 				</ul>
 		</div>
 	
@@ -25,15 +27,15 @@
 		<p class="instructions">{{ instructions }}</p>
 
 		<h2>Update this project:</h2>
-		<form method="patch" action="/{name of project}/{project-id}" class="projectUpdate">
+		<form method="post" action="/{name of project}/{project-id}" class="projectUpdate">
 			<label>Project Name</label>
-			<input type="text" name="projectName"  value=""></br>
+			<input type="text" name="projectName"  value=""><br>
 			
 			<label>Description</label>
-			<textarea name="projectDescription" value=""></br>
+			<textarea name="projectDescription"></textarea><br>
 			
 			<label>Materials</label>
-			<input type="text" name="projectMaterial" value=""></br>
+			<input type="text" name="projectMaterial" value=""><br>
 			
 			<input type="submit"/>
 		</form>
