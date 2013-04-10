@@ -1,6 +1,8 @@
+<!DOCTYPE html>
+<meta charset="utf-8"> 
 <!-- template for list of projects that have the same name -->
-
 <html>
+  <title>{{ projectName }}</title>
 	<body>
 		<h1>{{ projectName }}</h1>
 
@@ -9,15 +11,15 @@
 		<div id="instanceList">
 			<ul class="projectNames">
 				<li>
-					<a href="/{name of project}/{project-id}" rel="project" 
+					<a href="/{name-of-project}/{project-id}" rel="project" 
 					class="projectID">{{ projectID }}</a>
-					<span class="alternateTitle">{{ altTitle }}</span></br>
+					<span class="alternateTitle">{{ altTitle }}</span><br>
 					<span class="description">{{ description }}</span>
-				</li></br>
+				</li>
 				<li>
-					<a href="/{name of project}/{project-id}" rel="project" 
+					<a href="/{name-of-project}/{project-id}" rel="project" 
 					class="projectID">{{ projectID }}</a>
-					<span class="alternateTitle">{{ altTitle }}</span></br>
+					<span class="alternateTitle">{{ altTitle }}</span><br>
 					<span class="description">{{ description }}</span>
 				</li>
 			</ul>
